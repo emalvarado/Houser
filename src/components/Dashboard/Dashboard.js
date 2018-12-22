@@ -39,11 +39,14 @@ class Dashboard extends Component {
       city={house.city}
       state={house.state}
       zip={house.zip}
+      img={house.img}
+      mortgage={house.mortgage}
+      rent={house.rent}
       deleteHouse={this.deleteHouse}/>
     ))
     return(
       <div> Dashdash 
-        <Link to='/wizard'><button>Add New Property</button></Link> 
+        <Link to='/wizard/step1'><button>Add New Property</button></Link> 
         {housesToDisplay}
       </div>
     )

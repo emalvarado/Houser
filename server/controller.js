@@ -7,9 +7,9 @@ module.exports ={
   },
   createHouse: (req, res) => {
     const db = req.app.get('db')
-    const {name, address, city, state, zip} = req.body
+    const {name, address, city, state, zip, img, mortgage, rent} = req.body
 
-    db.create_house({name, address, city, state, zip}).then(response => {
+    db.create_house({name, address, city, state, zip, img, mortgage, rent}).then(response => {
       res.status(200).send(response)
     })
   },
