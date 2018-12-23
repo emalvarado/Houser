@@ -10,8 +10,8 @@ class StepThree extends Component{
     super(props);
 
     this.state = {
-      mortgage: this.props.mortgage,
-      rent: this.props.rent
+      mortgage: '',
+      rent: ''
     }
   }
 
@@ -22,10 +22,10 @@ class StepThree extends Component{
   // }
 
   addHouse = () => {
-    console.log(this.props)
-    console.log(this.state)
-    const {name, address, city, state, zip, img} = this.props
-    const {mortgage, rent} = this.state
+    // console.log(this.props)
+    // console.log(this.state)
+    const {name, address, city, state, zip, img, mortgage, rent} = this.props
+    // const {mortgage, rent} = this.state
     axios.post(`/api/houses`, {name, address, city, state, zip, img, mortgage, rent} ).then(
       this.props.clearInputs
     )
@@ -72,8 +72,14 @@ class StepThree extends Component{
 }
 
 function mapStateToProps(reduxState){
- const{ mortgage, rent} = reduxState;
+ const{ name, address, city, state, zip, img, mortgage, rent} = reduxState;
  return{
+   name,
+   address,
+   city,
+   state,
+   zip,
+   img,
    mortgage,
    rent
  }

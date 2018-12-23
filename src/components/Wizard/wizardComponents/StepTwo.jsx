@@ -8,7 +8,7 @@ class StepTwo extends Component{
     super(props);
 
     this.state = {
-      img: this.props.img
+      img: ''
     }
   }
 

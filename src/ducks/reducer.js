@@ -3,10 +3,10 @@ const initialState = {
   address: '',
   city: '',
   state: '',
-  zip: 0,
+  zip: '',
   img: '',
-  mortgage: 0,
-  rent: 0,
+  mortgage: '',
+  rent: '',
 }
 
 const UPDATE_NAME = 'UPDATE_NAME';

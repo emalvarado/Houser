@@ -9,11 +9,11 @@ class StepOne extends Component {
     super(props);
 
       this.state = {
-        name: this.props.name,
-        address: this.props.address,
-        city: this.props.city,
-        state: this.props.state,
-        zip: this.props.zip
+        name: '',
+        address: '',
+        city: '',
+        state: '',
+        zip: ''
       }
   }
 
